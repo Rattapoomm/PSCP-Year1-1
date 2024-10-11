@@ -1,20 +1,17 @@
-'''Dai'''
-def plus(num, per_senten):
-    '''sss'''
-    count = 0
-    total = 3
-    loca = 0
-    ans = []
-    for _ in range(num):
-        txt = input()
-        new = txt.split()
-        ans.extend(new)
-    #for _ in range(num):
-    #print(ans[9])
-    #print(ans[19])
-    #print(ans[29])
-    #while count == total:
-    print(int(ans[loca]))+(int(ans[int(loca)+int(per_senten)]))
-
-
-plus(int(input()), int(input()))
+"""Diamond I"""
+def diamond_1():
+    """Diamond I"""
+    m=int(input())
+    n=int(input())
+    list_1=[]
+    column_list=[]
+    for _ in range(m):
+        number=input()
+        list_1.append(number.split(" "))
+    for i in range(n):
+        column_sum = 0
+        for row in list_1:
+            column_sum += int(row[i])
+        column_list.append(column_sum)
+    print(max(column_list))
+diamond_1()
